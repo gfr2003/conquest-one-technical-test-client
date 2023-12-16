@@ -1,0 +1,10 @@
+<mat-icon (click)="changeSideNav()"
+  >{{ this.sidebar.drawer.opened ? "navigate_before" : "navigate_next" }}
+</mat-icon>
+<div class="main-container">
+  <section class="welcome-container">
+    <h1>Análise as ultimas buscas realizadas na plataforma!</h1>
+    <span>Veja os ativos acessados recentemente por outros usuários:</span>
+    <app-last-searchs></app-last-searchs>
+  </section>
+</div>

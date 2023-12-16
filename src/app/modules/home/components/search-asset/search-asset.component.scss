@@ -1,0 +1,26 @@
+.main-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  .form-container {
+    display: flex;
+    justify-content: space-evenly;
+    .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+      color: #fff;
+    }
+  }
+  ::ng-deep .mat-mdc-input-element {
+    color: #fff !important;
+  }
+
+  mat-icon {
+    color: #ffff;
+  }
+
+  mat-form-field {
+    ::ng-deep .mat-mdc-text-field-wrapper {
+      background-color: #1d1d41;
+    }
+  }
+}

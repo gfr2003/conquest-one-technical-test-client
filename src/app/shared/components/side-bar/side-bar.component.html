@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [mode]="'side'"
+    [opened]="true"
+  >
+    <img
+      src="../../../assets/logo.png"
+      style="height: 15%; width: 100%"
+      alt="Logo"
+    />
+    <mat-list>
+      <mat-list-item>
+        <div (click)="navigateTo('')">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div (click)="navigateTo('history')">
+          <mat-icon>history</mat-icon>
+          <span>Histórico</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

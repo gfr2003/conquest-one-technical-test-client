@@ -1,0 +1,16 @@
+<mat-icon (click)="changeSideNav()"
+  >{{ this.sidebar.drawer.opened ? "navigate_before" : "navigate_next" }}
+</mat-icon>
+<div class="main-container">
+  <section class="welcome-container">
+    <h1>Olá seja bem vindo ao TradeInsight!</h1>
+    <span
+      >A plataforma ideal para buscar insight's sobre o mercado financeiro e
+      descobrir as melhores opções para investimento.</span
+    >
+    <app-search-asset (assetData)="showAssetPrice($event)"></app-search-asset>
+    @if(this.assetData){
+    <app-asset-chart [assetData]="this.assetData"></app-asset-chart>
+    }
+  </section>
+</div>

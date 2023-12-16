@@ -1,0 +1,17 @@
+<section class="main-container">
+  <form class="form-container">
+    <mat-form-field>
+      <mat-label>Nome do ativo</mat-label>
+      <input type="text" matInput [formControl]="assetName" />
+      @if (assetName.hasError('required')) {
+      <mat-error>Nome do ativo é <strong>obrigatório</strong></mat-error>
+      }
+      <button matSuffix mat-button (click)="searchAsset()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+</section>
+@if (this.isLoading) {
+<app-loader></app-loader>
+}

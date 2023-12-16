@@ -1,0 +1,36 @@
+@import "../../../../assets/theme.scss";
+.sidenav-container {
+  height: 100%;
+  background-color: $secondary-color;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: $primary-color;
+}
+
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.sidenav-overlay.active {
+  display: block;
+}
+
+mat-list-item {
+  div {
+    display: flex;
+    mat-icon {
+      padding-right: 5px;
+    }
+  }
+  :hover {
+    cursor: pointer;
+  }
+}
